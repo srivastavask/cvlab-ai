@@ -113,19 +113,47 @@ class ImageProcessor:
 
 
 if __name__ == '__main__':
-    IMG_PATH = 'images/img.png'
-    # processor = ImageProcessor(IMG_PATH)
-    # print(f"Original image dimensions: {processor.get_dimensions()}")
-    # processor.resize_image(10, 10)
-    # processor2=ImageProcessor(IMG_PATH)
-    # processor2.resize_image(5,5,method='polynomial')
-    # processor2.display_image()
-    
-    # processor.blur_image()
-    # processor.display_image()
-    # processor.save_image('edited_images/asdf.png')
-
+    IMG_PATH = 'lab1\B_41_E22CSEU1207_RaghavJuneja\images\img.png'
+    OUTPUT_PATH = 'lab1/B_41_E22CSEU1207_RaghavJuneja/results/lab2comp/edited_images/'
 
     processor = ImageProcessor(IMG_PATH)
-    processor.resize_image(5,5)
+
+    
+    processor.resize_to_dimensions(100, 100, 'linear')
+    processor.save_image(f"{OUTPUT_PATH}resized_linear_100x100.png")
+
+    processor = ImageProcessor(IMG_PATH)
+    processor.resize_to_dimensions(100, 100, 'nearest')
+    processor.save_image(f"{OUTPUT_PATH}resized_nearest_100x100.png")
+
+    processor = ImageProcessor(IMG_PATH)
+    processor.resize_to_dimensions(100, 100, 'polynomial')
+    processor.save_image(f"{OUTPUT_PATH}resized_polynomial_100x100.png")
+
+  
+    processor = ImageProcessor(IMG_PATH)
+    processor.resize_by_scale(2, 2, 'linear')
+    processor.save_image(f"{OUTPUT_PATH}resized_scale_linear_2x2.png")
+
+    processor = ImageProcessor(IMG_PATH)
+    processor.resize_by_scale(2, 2, 'nearest')
+    processor.save_image(f"{OUTPUT_PATH}resized_scale_nearest_2x2.png")
+
+    processor = ImageProcessor(IMG_PATH)
+    processor.resize_by_scale(2, 2, 'polynomial')
+    processor.save_image(f"{OUTPUT_PATH}resized_scale_polynomial_2x2.png")
+
+  
+    processor = ImageProcessor(IMG_PATH)
+    processor.blur_image('box', (5, 5))
+    processor.save_image(f"{OUTPUT_PATH}blurred_box_5x5.png")
+
+    processor = ImageProcessor(IMG_PATH)
+    processor.blur_image('gaussian', (5, 5))
+    processor.save_image(f"{OUTPUT_PATH}blurred_gaussian_5x5.png")
+
+    processor = ImageProcessor(IMG_PATH)
+    processor.blur_image('adaptive', (5, 5))  # The ksize doesn't affect adaptive thresholding
+    processor.save_image(f"{OUTPUT_PATH}blurred_adaptive_5x5.png")
+    
     
