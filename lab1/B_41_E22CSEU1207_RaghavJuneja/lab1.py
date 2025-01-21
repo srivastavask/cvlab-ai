@@ -169,28 +169,37 @@ if __name__ == '__main__':
     # cv2.waitKey(0)
     # cv2.destroyAllWindows()
     
-    combined_canvas = Perform(blank_width, blank_height)
-    combined_canvas.make_shape(50, 50, 200, 150, shape_type='rectangle', color=(0, 255, 0))
-    combined_canvas.make_shape(250, 50, 400, 200, shape_type='triangle', color=(255, 0, 0))
-    combined_canvas.make_shape(50, 250, 200, 400, shape_type='square', color=(0, 0, 255))
-    combined_canvas.make_shape(250, 250, 400, 400, shape_type='rhombus', color=(255, 255, 0))
-    combined_canvas.save_image(f"{output_dir}/allshapes.png")
+    # combined_canvas = Perform(blank_width, blank_height)
+    # combined_canvas.make_shape(50, 50, 200, 150, shape_type='rectangle', color=(0, 255, 0))
+    # combined_canvas.make_shape(250, 50, 400, 200, shape_type='triangle', color=(255, 0, 0))
+    # combined_canvas.make_shape(50, 250, 200, 400, shape_type='square', color=(0, 0, 255))
+    # combined_canvas.make_shape(250, 250, 400, 400, shape_type='rhombus', color=(255, 255, 0))
+    # combined_canvas.save_image(f"{output_dir}/allshapes.png")
     
     
-    # cv2.imshow("Combined Shapes Canvas", combined_canvas.blank)
-    # canvas = Perform(blank_width, blank_height)
-    # canvas.make_shape(50, 50, 200, 150, shape_type='rectangle', color=(0, 255, 0))
-    # canvas.make_shape(250, 50, 400, 200, shape_type='triangle', color=(255, 0, 0))
-    # canvas.make_shape(50, 250, 200, 400, shape_type='square', color=(0, 0, 255))
-    # canvas.make_shape(250, 250, 400, 400, shape_type='rhombus', color=(255, 255, 0))
+    canvas = Perform(blank_width, blank_height)
+    canvas.make_shape(50, 50, 200, 150, shape_type='rectangle', color=(0, 255, 0))
+    canvas.make_shape(250, 50, 400, 200, shape_type='triangle', color=(255, 0, 0))
+    canvas.make_shape(50, 250, 200, 400, shape_type='square', color=(0, 0, 255))
+    canvas.make_shape(250, 250, 400, 400, shape_type='rhombus', color=(255, 255, 0))
 
+    # Save original canvas
+    canvas.save_image(f"{output_dir}/original_canvas.png")
 
+    # Perform scaling
+    scaled_canvas = canvas.scale(1.5, 1.5)
+    cv2.imshow("Scaled Canvas", scaled_canvas)
+    cv2.imwrite(f"{output_dir}/scaled_canvas.png", scaled_canvas)
 
-    # cv2.imshow("Original Canvas", canvas.blank)
-    # scaled_canvas = canvas.scale(1.5, 1.5)
-    # cv2.imshow("Scaled Canvas", scaled_canvas)
-    # rotated_canvas = canvas.rotate(45)
-    # cv2.imshow("Rotated Canvas", rotated_canvas)
+    # Perform rotation
+    rotated_canvas = canvas.rotate(45)
+    cv2.imshow("Rotated Canvas", rotated_canvas)
+    cv2.imwrite(f"{output_dir}/rotated_canvas.png", rotated_canvas)
+
+    cv2.waitKey(0)
+    cv2.destroyAllWindows()
+    
+    # canvas.save_image(f"{output_dir}/rotated.png")
     
     # reflected_canvas = canvas.reflect('horizontal')
     # cv2.imshow("Reflected Canvas (Horizontal)", reflected_canvas)
@@ -205,6 +214,6 @@ if __name__ == '__main__':
     # cropped_region = canvas.crop(50, 50, 200, 150)
     # cv2.imshow("Cropped Region", cropped_region)
 
-    # cv2.waitKey(0)
-    # cv2.destroyAllWindows()
+    cv2.waitKey(0)
+    cv2.destroyAllWindows()
 
