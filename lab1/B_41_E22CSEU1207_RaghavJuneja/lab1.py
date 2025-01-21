@@ -12,7 +12,7 @@ class Perform:
 
     @staticmethod
     def available_shapes():
-        return ['rectangle', 'triangle', 'square', 'rhombus']  # Fixed typo
+        return ['rectangle', 'triangle', 'square', 'rhombus']  
 
     def make_shape(self, startX, startY, endX, endY, shape_type, color=(255, 255, 255), thickness=2):
         if shape_type == 'rectangle':
