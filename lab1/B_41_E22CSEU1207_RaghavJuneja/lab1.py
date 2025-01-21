@@ -149,22 +149,22 @@ if __name__ == '__main__':
     # rectangle = Perform(blank_width, blank_height)
     # canvas1 = rectangle.make_shape(50, 50, 200, 150, shape_type='rectangle', color=(0, 255, 0)) 
     # cv2.imshow("Rectangle Canvas", canvas1)
-    # rectangle.save_image(f"{output_dir}/rectangle_canvas.png")
+    # # rectangle.save_image(f"{output_dir}/rectangle_canvas.png")
 
     # triangle = Perform(blank_width, blank_height)
     # canvas2 = triangle.make_shape(250, 50, 400, 200, shape_type='triangle', color=(255, 0, 0))
     # cv2.imshow('Triangle Canvas', canvas2)
-    # triangle.save_image(f"{output_dir}/triangle_canvas.png")
+    # # triangle.save_image(f"{output_dir}/triangle_canvas.png")
 
     # square = Perform(blank_width, blank_height)
     # canvas3 = square.make_shape(50, 250, 200, 400, shape_type='square', color=(0, 0, 255))
     # cv2.imshow('Square Canvas', canvas3)
-    # square.save_image(f"{output_dir}/square_canvas.png")
+    # # square.save_image(f"{output_dir}/square_canvas.png")
 
     # rhombus = Perform(blank_width, blank_height)
     # canvas4 = rhombus.make_shape(250, 250, 400, 400, shape_type='rhombus', color=(255, 255, 0))
     # cv2.imshow('Rhombus Canvas', canvas4)
-    # rhombus.save_image(f"{output_dir}/rhombus_canvas.png")
+    # # rhombus.save_image(f"{output_dir}/rhombus_canvas.png")
 
     # cv2.waitKey(0)
     # cv2.destroyAllWindows()
@@ -177,27 +177,60 @@ if __name__ == '__main__':
     # combined_canvas.save_image(f"{output_dir}/allshapes.png")
     
     
-    canvas = Perform(blank_width, blank_height)
-    canvas.make_shape(50, 50, 200, 150, shape_type='rectangle', color=(0, 255, 0))
-    canvas.make_shape(250, 50, 400, 200, shape_type='triangle', color=(255, 0, 0))
-    canvas.make_shape(50, 250, 200, 400, shape_type='square', color=(0, 0, 255))
-    canvas.make_shape(250, 250, 400, 400, shape_type='rhombus', color=(255, 255, 0))
+    # canvas = Perform(blank_width, blank_height)
+    # canvas.make_shape(50, 50, 200, 150, shape_type='rectangle', color=(0, 255, 0))
+    # canvas.make_shape(250, 50, 400, 200, shape_type='triangle', color=(255, 0, 0))
+    # canvas.make_shape(50, 250, 200, 400, shape_type='square', color=(0, 0, 255))
+    # canvas.make_shape(250, 250, 400, 400, shape_type='rhombus', color=(255, 255, 0))
 
     # Save original canvas
-    canvas.save_image(f"{output_dir}/original_canvas.png")
+    # canvas.save_image(f"{output_dir}/original_canvas.png")
 
-    # Perform scaling
-    scaled_canvas = canvas.scale(1.5, 1.5)
-    cv2.imshow("Scaled Canvas", scaled_canvas)
-    cv2.imwrite(f"{output_dir}/scaled_canvas.png", scaled_canvas)
+    # # Perform scaling
+    # scaled_canvas = canvas.scale(1.5, 1.5)
+    # cv2.imshow("Scaled Canvas", scaled_canvas)
+    # cv2.imwrite(f"{output_dir}/scaled_canvas.png", scaled_canvas)
 
-    # Perform rotation
-    rotated_canvas = canvas.rotate(45)
-    cv2.imshow("Rotated Canvas", rotated_canvas)
-    cv2.imwrite(f"{output_dir}/rotated_canvas.png", rotated_canvas)
+    # # Perform rotation
+    # rotated_canvas = canvas.rotate(45)
+    # cv2.imshow("Rotated Canvas", rotated_canvas)
+    # cv2.imwrite(f"{output_dir}/rotated_canvas.png", rotated_canvas)
+    
+    # translated_canvas = canvas.translate(50, 50)  
+    # cv2.imshow("Translated Canvas", translated_canvas)
+    # cv2.imwrite(f"{output_dir}/translated_canvas.png", translated_canvas)
 
-    cv2.waitKey(0)
-    cv2.destroyAllWindows()
+    # if we just want to move only one shape in canva-> we can black oriinal area
+    # create new shape and then perform
+    # rectangle = Perform(blank_width, blank_height)
+    # canvas1 = rectangle.make_shape(50, 50, 200, 150, shape_type='rectangle', color=(0, 255, 0))
+    # cv2.imshow("Rectangle Canvas", canvas1)
+    # translated_canvas1 = rectangle.translate(50, 50)  # Apply translation
+    # cv2.imshow("Translated Rectangle", translated_canvas1)
+    # cv2.imwrite(f"{output_dir}/translated_rectangle_canvas.png", translated_canvas1)
+
+    # triangle = Perform(blank_width, blank_height)
+    # canvas2 = triangle.make_shape(250, 50, 400, 200, shape_type='triangle', color=(255, 0, 0))
+    # cv2.imshow('Triangle Canvas', canvas2)
+    # translated_canvas2 = triangle.translate(50, 50)  # Apply translation
+    # cv2.imshow("Translated Triangle", translated_canvas2)
+    # cv2.imwrite(f"{output_dir}/translated_triangle_canvas.png", translated_canvas2)
+
+    # square = Perform(blank_width, blank_height)
+    # canvas3 = square.make_shape(50, 250, 200, 400, shape_type='square', color=(0, 0, 255))
+    # cv2.imshow('Square Canvas', canvas3)
+    # translated_canvas3 = square.translate(50, 50)  # Apply translation
+    # cv2.imshow("Translated Square", translated_canvas3)
+    # cv2.imwrite(f"{output_dir}/translated_square_canvas.png", translated_canvas3)
+
+    # rhombus = Perform(blank_width, blank_height)
+    # canvas4 = rhombus.make_shape(250, 250, 400, 400, shape_type='rhombus', color=(255, 255, 0))
+    # cv2.imshow('Rhombus Canvas', canvas4)
+    # translated_canvas4 = rhombus.translate(50, 50)  # Apply translation
+    # cv2.imshow("Translated Rhombus", translated_canvas4)
+    # cv2.imwrite(f"{output_dir}/translated_rhombus_canvas.png", translated_canvas4)
+    # cv2.waitKey(0)
+    # cv2.destroyAllWindows()
     
     # canvas.save_image(f"{output_dir}/rotated.png")
     
@@ -214,6 +247,102 @@ if __name__ == '__main__':
     # cropped_region = canvas.crop(50, 50, 200, 150)
     # cv2.imshow("Cropped Region", cropped_region)
 
-    cv2.waitKey(0)
-    cv2.destroyAllWindows()
+    # cv2.waitKey(0)
+    # cv2.destroyAllWindows()
+    # rectangle = Perform(blank_width, blank_height)
+    # canvas1 = rectangle.make_shape(50, 50, 200, 150, shape_type='rectangle', color=(0, 255, 0))
+    # translated_canvas1 = rectangle.translate(50, 50)
+    # rotated_canvas1 = rectangle.rotate(45)
+    # reflected_canvas1 = rectangle.reflect('horizontal')
+    # sheared_canvas1 = rectangle.shear(0.5, 0.2)
 
+    # # Save transformed images
+    # cv2.imwrite(f"{output_dir}/translated_rectangle_canvas.png", translated_canvas1)
+    # cv2.imwrite(f"{output_dir}/rotated_rectangle_canvas.png", rotated_canvas1)
+    # cv2.imwrite(f"{output_dir}/reflected_rectangle_canvas.png", reflected_canvas1)
+    # cv2.imwrite(f"{output_dir}/sheared_rectangle_canvas.png", sheared_canvas1)
+
+    # # Create and apply transformations for Triangle
+    # triangle = Perform(blank_width, blank_height)
+    # canvas2 = triangle.make_shape(250, 50, 400, 200, shape_type='triangle', color=(255, 0, 0))
+    # translated_canvas2 = triangle.translate(50, 50)
+    # rotated_canvas2 = triangle.rotate(45)
+    # reflected_canvas2 = triangle.reflect('vertical')
+    # sheared_canvas2 = triangle.shear(0.5, 0.2)
+
+    # # Save transformed images
+    # cv2.imwrite(f"{output_dir}/translated_triangle_canvas.png", translated_canvas2)
+    # cv2.imwrite(f"{output_dir}/rotated_triangle_canvas.png", rotated_canvas2)
+    # cv2.imwrite(f"{output_dir}/reflected_triangle_canvas.png", reflected_canvas2)
+    # cv2.imwrite(f"{output_dir}/sheared_triangle_canvas.png", sheared_canvas2)
+
+    # # Create and apply transformations for Square
+    # square = Perform(blank_width, blank_height)
+    # canvas3 = square.make_shape(50, 250, 200, 400, shape_type='square', color=(0, 0, 255))
+    # translated_canvas3 = square.translate(50, 50)
+    # rotated_canvas3 = square.rotate(45)
+    # reflected_canvas3 = square.reflect('horizontal')
+    # sheared_canvas3 = square.shear(0.5, 0.2)
+
+    
+    # cv2.imwrite(f"{output_dir}/translated_square_canvas.png", translated_canvas3)
+    # cv2.imwrite(f"{output_dir}/rotated_square_canvas.png", rotated_canvas3)
+    # cv2.imwrite(f"{output_dir}/reflected_square_canvas.png", reflected_canvas3)
+    # cv2.imwrite(f"{output_dir}/sheared_square_canvas.png", sheared_canvas3)
+
+    
+    # rhombus = Perform(blank_width, blank_height)
+    # canvas4 = rhombus.make_shape(250, 250, 400, 400, shape_type='rhombus', color=(255, 255, 0))
+    # translated_canvas4 = rhombus.translate(50, 50)
+    # rotated_canvas4 = rhombus.rotate(45)
+    # reflected_canvas4 = rhombus.reflect('vertical')
+    # sheared_canvas4 = rhombus.shear(0.5, 0.2)
+
+    # cv2.imwrite(f"{output_dir}/translated_rhombus_canvas.png", translated_canvas4)
+    # cv2.imwrite(f"{output_dir}/rotated_rhombus_canvas.png", rotated_canvas4)
+    # cv2.imwrite(f"{output_dir}/reflected_rhombus_canvas.png", reflected_canvas4)
+    # cv2.imwrite(f"{output_dir}/sheared_rhombus_canvas.png", sheared_canvas4)
+
+
+    # cv2.imshow("Original Rectangle", canvas1)
+    # cv2.imshow("Translated Rectangle", translated_canvas1)
+    # cv2.imshow("Rotated Rectangle", rotated_canvas1)
+    # cv2.imshow("Reflected Rectangle", reflected_canvas1)
+    # cv2.imshow("Sheared Rectangle", sheared_canvas1)
+
+    # cv2.imshow("Original Triangle", canvas2)
+    # cv2.imshow("Translated Triangle", translated_canvas2)
+    # cv2.imshow("Rotated Triangle", rotated_canvas2)
+    # cv2.imshow("Reflected Triangle", reflected_canvas2)
+    # cv2.imshow("Sheared Triangle", sheared_canvas2)
+
+    # cv2.imshow("Original Square", canvas3)
+    # cv2.imshow("Translated Square", translated_canvas3)
+    # cv2.imshow("Rotated Square", rotated_canvas3)
+    # cv2.imshow("Reflected Square", reflected_canvas3)
+    # cv2.imshow("Sheared Square", sheared_canvas3)
+
+    # cv2.imshow("Original Rhombus", canvas4)
+    # cv2.imshow("Translated Rhombus", translated_canvas4)
+    # cv2.imshow("Rotated Rhombus", rotated_canvas4)
+    # cv2.imshow("Reflected Rhombus", reflected_canvas4)
+    # cv2.imshow("Sheared Rhombus", sheared_canvas4)
+
+    # cv2.waitKey(0)
+    # cv2.destroyAllWindows()
+    canvas = Perform(blank_width, blank_height)
+    canvas.make_shape(50, 50, 200, 150, shape_type='rectangle', color=(0, 255, 0))
+    canvas.make_shape(250, 50, 400, 200, shape_type='triangle', color=(255, 0, 0))
+    canvas.make_shape(50, 250, 200, 400, shape_type='square', color=(0, 0, 255))
+    canvas.make_shape(250, 250, 400, 400, shape_type='rhombus', color=(255, 255, 0))
+
+    rotated_canvas = canvas.rotate(45)
+    cv2.imwrite(f"{output_dir}/rotated_canvas.png", rotated_canvas)
+
+    
+    reflected_canvas = canvas.reflect('horizontal')
+    cv2.imwrite(f"{output_dir}/reflected_canvas.png", reflected_canvas)
+
+    
+    sheared_canvas = canvas.shear(0.5, 0.2)
+    cv2.imwrite(f"{output_dir}/sheared_canvas.png", sheared_canvas)
