@@ -1,6 +1,6 @@
 import cv2
 import numpy as np
-
+import os
 class Perform:
     def __init__(self, width, height):
         """
@@ -135,61 +135,75 @@ class Perform:
         :return: Cropped region of the canvas.
         """
         return self.blank[startY:endY, startX:endX]
+    def save_image(self, filepath):
+        cv2.imwrite(filepath, self.blank)
+        print(f"Image saved: {filepath}")
+
 if __name__ == '__main__':
+    output_dir = 'lab1/B_41_E22CSEU1207_RaghavJuneja/results/lab1comp/edited_images'
+    if not os.path.exists(output_dir):
+        os.makedirs(output_dir)
+
     blank_width, blank_height = 500, 500
 
-    # Drawing all shapes on individual canvases
     rectangle = Perform(blank_width, blank_height)
     canvas1 = rectangle.make_shape(50, 50, 200, 150, shape_type='rectangle', color=(0, 255, 0)) 
     cv2.imshow("Rectangle Canvas", canvas1)
+    rectangle.save_image(f"{output_dir}/rectangle_canvas.png")
 
     triangle = Perform(blank_width, blank_height)
     canvas2 = triangle.make_shape(250, 50, 400, 200, shape_type='triangle', color=(255, 0, 0))
     cv2.imshow('Triangle Canvas', canvas2)
+    triangle.save_image(f"{output_dir}/triangle_canvas.png")
 
     square = Perform(blank_width, blank_height)
     canvas3 = square.make_shape(50, 250, 200, 400, shape_type='square', color=(0, 0, 255))
     cv2.imshow('Square Canvas', canvas3)
+    square.save_image(f"{output_dir}/square_canvas.png")
 
     rhombus = Perform(blank_width, blank_height)
     canvas4 = rhombus.make_shape(250, 250, 400, 400, shape_type='rhombus', color=(255, 255, 0))
     cv2.imshow('Rhombus Canvas', canvas4)
-
-    
-    combined_canvas = Perform(blank_width, blank_height)
-    combined_canvas.make_shape(50, 50, 200, 150, shape_type='rectangle', color=(0, 255, 0))
-    combined_canvas.make_shape(250, 50, 400, 200, shape_type='triangle', color=(255, 0, 0))
-    combined_canvas.make_shape(50, 250, 200, 400, shape_type='square', color=(0, 0, 255))
-    combined_canvas.make_shape(250, 250, 400, 400, shape_type='rhombus', color=(255, 255, 0))
-
-    
-    cv2.imshow("Combined Shapes Canvas", combined_canvas.blank)
-    canvas = Perform(blank_width, blank_height)
-    canvas.make_shape(50, 50, 200, 150, shape_type='rectangle', color=(0, 255, 0))
-    canvas.make_shape(250, 50, 400, 200, shape_type='triangle', color=(255, 0, 0))
-    canvas.make_shape(50, 250, 200, 400, shape_type='square', color=(0, 0, 255))
-    canvas.make_shape(250, 250, 400, 400, shape_type='rhombus', color=(255, 255, 0))
-
-
-    cv2.imshow("Original Canvas", canvas.blank)
-    scaled_canvas = canvas.scale(1.5, 1.5)
-    cv2.imshow("Scaled Canvas", scaled_canvas)
-    rotated_canvas = canvas.rotate(45)
-    cv2.imshow("Rotated Canvas", rotated_canvas)
-    
-    reflected_canvas = canvas.reflect('horizontal')
-    cv2.imshow("Reflected Canvas (Horizontal)", reflected_canvas)
-
-    reflected_canvas_vertical = canvas.reflect('vertical')
-    cv2.imshow("Reflected Canvas (Vertical)", reflected_canvas_vertical)
-    
-    sheared_canvas = canvas.shear(0.5, 0.2)  # Example shear factors
-    cv2.imshow("Sheared Canvas", sheared_canvas)
-    # translated_canvas = canvas.translate(100, 100)
-    # cv2.imshow("Translated Canvas", translated_canvas)
-    cropped_region = canvas.crop(50, 50, 200, 150)
-    cv2.imshow("Cropped Region", cropped_region)
+    rhombus.save_image(f"{output_dir}/rhombus_canvas.png")
 
     cv2.waitKey(0)
     cv2.destroyAllWindows()
+    
+    # combined_canvas = Perform(blank_width, blank_height)
+    # combined_canvas.make_shape(50, 50, 200, 150, shape_type='rectangle', color=(0, 255, 0))
+    # combined_canvas.make_shape(250, 50, 400, 200, shape_type='triangle', color=(255, 0, 0))
+    # combined_canvas.make_shape(50, 250, 200, 400, shape_type='square', color=(0, 0, 255))
+    # combined_canvas.make_shape(250, 250, 400, 400, shape_type='rhombus', color=(255, 255, 0))
+
+    
+    # cv2.imshow("Combined Shapes Canvas", combined_canvas.blank)
+    # canvas = Perform(blank_width, blank_height)
+    # canvas.make_shape(50, 50, 200, 150, shape_type='rectangle', color=(0, 255, 0))
+    # canvas.make_shape(250, 50, 400, 200, shape_type='triangle', color=(255, 0, 0))
+    # canvas.make_shape(50, 250, 200, 400, shape_type='square', color=(0, 0, 255))
+    # canvas.make_shape(250, 250, 400, 400, shape_type='rhombus', color=(255, 255, 0))
+
+
+
+    # cv2.imshow("Original Canvas", canvas.blank)
+    # scaled_canvas = canvas.scale(1.5, 1.5)
+    # cv2.imshow("Scaled Canvas", scaled_canvas)
+    # rotated_canvas = canvas.rotate(45)
+    # cv2.imshow("Rotated Canvas", rotated_canvas)
+    
+    # reflected_canvas = canvas.reflect('horizontal')
+    # cv2.imshow("Reflected Canvas (Horizontal)", reflected_canvas)
+
+    # reflected_canvas_vertical = canvas.reflect('vertical')
+    # cv2.imshow("Reflected Canvas (Vertical)", reflected_canvas_vertical)
+    
+    # sheared_canvas = canvas.shear(0.5, 0.2)  # Example shear factors
+    # cv2.imshow("Sheared Canvas", sheared_canvas)
+    # # translated_canvas = canvas.translate(100, 100)
+    # # cv2.imshow("Translated Canvas", translated_canvas)
+    # cropped_region = canvas.crop(50, 50, 200, 150)
+    # cv2.imshow("Cropped Region", cropped_region)
+
+    # cv2.waitKey(0)
+    # cv2.destroyAllWindows()
 
