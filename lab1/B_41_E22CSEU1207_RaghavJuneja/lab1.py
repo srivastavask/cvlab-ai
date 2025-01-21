@@ -146,35 +146,36 @@ if __name__ == '__main__':
 
     blank_width, blank_height = 500, 500
 
-    rectangle = Perform(blank_width, blank_height)
-    canvas1 = rectangle.make_shape(50, 50, 200, 150, shape_type='rectangle', color=(0, 255, 0)) 
-    cv2.imshow("Rectangle Canvas", canvas1)
-    rectangle.save_image(f"{output_dir}/rectangle_canvas.png")
+    # rectangle = Perform(blank_width, blank_height)
+    # canvas1 = rectangle.make_shape(50, 50, 200, 150, shape_type='rectangle', color=(0, 255, 0)) 
+    # cv2.imshow("Rectangle Canvas", canvas1)
+    # rectangle.save_image(f"{output_dir}/rectangle_canvas.png")
 
-    triangle = Perform(blank_width, blank_height)
-    canvas2 = triangle.make_shape(250, 50, 400, 200, shape_type='triangle', color=(255, 0, 0))
-    cv2.imshow('Triangle Canvas', canvas2)
-    triangle.save_image(f"{output_dir}/triangle_canvas.png")
+    # triangle = Perform(blank_width, blank_height)
+    # canvas2 = triangle.make_shape(250, 50, 400, 200, shape_type='triangle', color=(255, 0, 0))
+    # cv2.imshow('Triangle Canvas', canvas2)
+    # triangle.save_image(f"{output_dir}/triangle_canvas.png")
 
-    square = Perform(blank_width, blank_height)
-    canvas3 = square.make_shape(50, 250, 200, 400, shape_type='square', color=(0, 0, 255))
-    cv2.imshow('Square Canvas', canvas3)
-    square.save_image(f"{output_dir}/square_canvas.png")
+    # square = Perform(blank_width, blank_height)
+    # canvas3 = square.make_shape(50, 250, 200, 400, shape_type='square', color=(0, 0, 255))
+    # cv2.imshow('Square Canvas', canvas3)
+    # square.save_image(f"{output_dir}/square_canvas.png")
 
-    rhombus = Perform(blank_width, blank_height)
-    canvas4 = rhombus.make_shape(250, 250, 400, 400, shape_type='rhombus', color=(255, 255, 0))
-    cv2.imshow('Rhombus Canvas', canvas4)
-    rhombus.save_image(f"{output_dir}/rhombus_canvas.png")
+    # rhombus = Perform(blank_width, blank_height)
+    # canvas4 = rhombus.make_shape(250, 250, 400, 400, shape_type='rhombus', color=(255, 255, 0))
+    # cv2.imshow('Rhombus Canvas', canvas4)
+    # rhombus.save_image(f"{output_dir}/rhombus_canvas.png")
 
-    cv2.waitKey(0)
-    cv2.destroyAllWindows()
+    # cv2.waitKey(0)
+    # cv2.destroyAllWindows()
     
-    # combined_canvas = Perform(blank_width, blank_height)
-    # combined_canvas.make_shape(50, 50, 200, 150, shape_type='rectangle', color=(0, 255, 0))
-    # combined_canvas.make_shape(250, 50, 400, 200, shape_type='triangle', color=(255, 0, 0))
-    # combined_canvas.make_shape(50, 250, 200, 400, shape_type='square', color=(0, 0, 255))
-    # combined_canvas.make_shape(250, 250, 400, 400, shape_type='rhombus', color=(255, 255, 0))
-
+    combined_canvas = Perform(blank_width, blank_height)
+    combined_canvas.make_shape(50, 50, 200, 150, shape_type='rectangle', color=(0, 255, 0))
+    combined_canvas.make_shape(250, 50, 400, 200, shape_type='triangle', color=(255, 0, 0))
+    combined_canvas.make_shape(50, 250, 200, 400, shape_type='square', color=(0, 0, 255))
+    combined_canvas.make_shape(250, 250, 400, 400, shape_type='rhombus', color=(255, 255, 0))
+    combined_canvas.save_image(f"{output_dir}/allshapes.png")
+    
     
     # cv2.imshow("Combined Shapes Canvas", combined_canvas.blank)
     # canvas = Perform(blank_width, blank_height)
