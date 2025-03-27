@@ -120,16 +120,16 @@ jupyter>=1.0.0
 ## Experiment 1
 
 Task-1: Perform following operations on image- 
-1.1 Image Resizing: Resizing involves changing the dimensions of an image, either by scaling it up or down.
-1.1	Image resizing (interpolation methods)
-1.1.1	Linear
-1.1.2	Nearest Neighbors
-1.1.3	Polynomial 
-1.2 Image Blurring: Blurring is used to reduce image detail, suppress noise, or create artistic effects. Common techniques include:
-1.2	Image blurring
-1.2.1	Box blurring
-1.2.2	Gaussian blurring
-1.2.3	Adaptive blurring
+-Image Resizing: Resizing involves changing the dimensions of an image, either by scaling it up or down.
+-Image resizing (interpolation methods)
+- Linear
+- Nearest Neighbors
+- Polynomial
+- Image Blurring: Blurring is used to reduce image detail, suppress noise, or create artistic effects. Common techniques include:
+1. Image blurring
+2. Box blurring
+3. Gaussian blurring
+4. Adaptive blurring
 
 Task-2: Apply Machine Learning Algorithm and find the model accuracy based on K fold Cross Validation with (80-20 train-test split).  
 2.1	Use MNIST dataset
