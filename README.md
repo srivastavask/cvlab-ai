@@ -118,9 +118,9 @@ jupyter>=1.0.0
 
 ## 🚀 Assignments
 ## Experiment 1
-1. Task-1: - Perform following operations on image-
- 
-1.1 Image Resizing: Resizing involves changing the dimensions of an image, either by scaling it up or down. 
+
+Task-1: Perform following operations on image- 
+1.1 Image Resizing: Resizing involves changing the dimensions of an image, either by scaling it up or down.
 1.1	Image resizing (interpolation methods)
 1.1.1	Linear
 1.1.2	Nearest Neighbors
@@ -131,7 +131,7 @@ jupyter>=1.0.0
 1.2.2	Gaussian blurring
 1.2.3	Adaptive blurring
 
-Task-2: - Apply Machine Learning Algorithm and find the model accuracy based on K fold Cross Validation with (80-20 train-test split).  
+Task-2: Apply Machine Learning Algorithm and find the model accuracy based on K fold Cross Validation with (80-20 train-test split).  
 2.1	Use MNIST dataset
 2.2	Use any two of the following algorithms-
 2.2.1	Naive Bayesian or its variant.
