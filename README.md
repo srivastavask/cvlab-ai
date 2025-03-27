@@ -132,39 +132,38 @@ Task-1: Perform following operations on image-
 4. Adaptive blurring
 
 Task-2: Apply Machine Learning Algorithm and find the model accuracy based on K fold Cross Validation with (80-20 train-test split).  
-2.1	Use MNIST dataset
-2.2	Use any two of the following algorithms-
-2.2.1	Naive Bayesian or its variant.
-2.2.2	Support Vector Machine (SVM) or its variant
-2.2.3	Decision Trees/ Random Forest.
-2.2.4	AdaBoost or other ensemble algorithms.
-2.2.5	Artificial Neural Networks (NN) or its variant.
-2.3	Results should be obtained on following parameters-
-2.3.1	Accuracy
-2.3.2	Precision (Positive Predictive Value)
-2.3.3	Recall (Sensitivity)
-2.3.4	F-Measure
-2.3.5	Confusion Matrix
-2.3.6	ROC
-2.3.7	AUC
-Appendix:- 
-About MNIST :- 
-•	The MNIST dataset stands for "Modified National Institute of Standards and Technology". 
-•	The dataset contains a large collection of handwritten digits that is commonly used for training various image processing systems. 
-•	 
-•	The dataset was created by re-mixing samples from NIST's original datasets, which were taken from American Census Bureau employees and high school students. 
-•	It contains 60,000 training images and 10,000 testing images, each of which is a grayscale image of size 28x28 pixels.
-o	Number of Instances: 70,000 images
-o	Number of Attributes: 784 (28x28 pixels)
-o	Target: Column represents the digit (0-9) corresponding to the handwritten image
-o	Pixel 1-784: Each pixel value (0-255) represents the grayscale intensity of the corresponding pixel in the image.
-o	The dataset is divided into two main subsets:
-	Training Set: Consists of 60,000 images along with their labels, commonly used for training machine learning models.
-	Test Set: Contains 10,000 images with their corresponding labels, used for evaluating the performance of trained models.
-•	Link:- https://www.kaggle.com/datasets/hojjatk/mnist-dataset 
-•	Note:- Use sklearn, pyspark, or any other ML library for applying the ML algorithms.
-o	Load the dataset in sklearn using ‘load_digits’.
-o	Load the dataset in pyspark using 'spark.read.csv()”
+1. Use MNIST dataset
+2. Use any two of the following algorithms-
+3. Naive Bayesian or its variant.
+4. Support Vector Machine (SVM) or its variant
+5. Decision Trees/ Random Forest.
+6. AdaBoost or other ensemble algorithms.
+7. Artificial Neural Networks (NN) or its variant.
+- Results should be obtained on following parameters-
+1. Accuracy
+2. Precision (Positive Predictive Value)
+3. Recall (Sensitivity)
+4. F-Measure
+5. Confusion Matrix
+6. ROC
+7. AUC
+- Appendix:
+About MNIST :-
+- The MNIST dataset stands for "Modified National Institute of Standards and Technology"
+- The dataset contains a large collection of handwritten digits that is commonly used for training various image processing systems.
+- The dataset was created by re-mixing samples from NIST's original datasets, which were taken from American Census Bureau employees and high school students.
+- It contains 60,000 training images and 10,000 testing images, each of which is a grayscale image of size 28x28 pixels.
+- Number of Instances: 70,000 images
+- Number of Attributes: 784 (28x28 pixels)
+- Target: Column represents the digit (0-9) corresponding to the handwritten image
+- Pixel 1-784: Each pixel value (0-255) represents the grayscale intensity of the corresponding pixel in the image.
+- The dataset is divided into two main subsets:
+- Training Set: Consists of 60,000 images along with their labels, commonly used for training machine learning models.
+- Test Set: Contains 10,000 images with their corresponding labels, used for evaluating the performance of trained models.
+- Link:- https://www.kaggle.com/datasets/hojjatk/mnist-dataset
+- Note:- Use sklearn, pyspark, or any other ML library for applying the ML algorithms.
+- Load the dataset in sklearn using ‘load_digits’.
+- Load the dataset in pyspark using 'spark.read.csv()”
 
 
 ---
