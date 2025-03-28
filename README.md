@@ -166,10 +166,10 @@ About MNIST :-
 - Load the dataset in pyspark using 'spark.read.csv()”
 
 ## Experiment 8
-# Task 1.1- Blob detection and Image Quality Enhancement
+### Task 1.1- Blob detection and Image Quality Enhancement
 - Blob detection:- Blob detection is a basic method in computer vision used to locate areas of interest in a picture.
 - Apply the three different blob detection techniques (LoG, DoG, HoG) separately on the same image
-# Task 1.2- Image quality enhancement (Perform this using the following techniques)
+### Task 1.2- Image quality enhancement (Perform this using the following techniques)
 - Adjusting brightness and contrast
 - Sharpening images
 - Removing noise from images
@@ -179,11 +179,11 @@ About MNIST :-
 - Equalizing histograms
 - Super-resolution
 - Color correction
-# Task 2.1- Image Classification using Resnet network on Cifar 100
+### Task 2.1- Image Classification using Resnet network on Cifar 100
 - Compare the performance of Resnet 18 and Resnet 34  an image classification task.
 - Use CIFAR-100, a common dataset for image classification.
 - Analyse model accuracy, loss, and inference time on a dataset.
-# Task 2.2- Meta learning approaches for image classification on MNIST dataset
+### Task 2.2- Meta learning approaches for image classification on MNIST dataset
 - Zero Shot
 - One Shot
 - Few Shot
