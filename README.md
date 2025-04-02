@@ -190,7 +190,7 @@ About MNIST :-
 ---
 
 ## Experiment 9
-### Task 1.1- Interest Point Detection, Feature Matching and Contour Detection
+### Task 1- Interest Point Detection, Feature Matching and Contour Detection
 * Interest Point Detection:-  Apply SIFT (Scale Invariant Feature Transform) Detector function using cv.SIFT_create()
 * Feature Matching:- Feature matching is a fundamental technique in computer vision and image processing that involves finding correspondences between features detected in different images.
 * Use methods namely ORB (Oriented FAST and Rotated BRIEF) and BFMatcher (Brute-Force Matcher).
@@ -198,6 +198,27 @@ About MNIST :-
 * In image processing, edges represent abrupt changes in brightness or color, while contours are closed curves that outline the shape or form of an object, often derived from edges.
 * Functions like markers, watershed, with some additional color placement functions can be used.
 
-### Task 2- Blob detection and Image Quality Enhancement
+### Task 2- Image Restoration using Autoencoder Model
+** Step 1: Load & Preprocess Data
+*	Load dataset (e.g., MNIST, CIFAR-10).
+*	Normalize pixel values between [0,1].
+*	Resize images if necessary.
+* 	Convert to grayscale (if required).
+** Step 2: Simulate Degradation
+*	Introduce noise (Gaussian noise, salt & pepper noise).
+*	Apply blur (motion blur, Gaussian blur).
+*	Add compression artifacts if needed.
+** Step 3: Build the Autoencoder Model
+*	Encoder: Uses convolutional layers to extract features and compress image representation.
+*	Decoder: Reconstructs the image from the compressed representation using up-sampling and convolutional layers.
+** Step 4: Train the Model
+*	Train autoencoder using degraded images as input and original images as target output.
+*	Use Mean Squared Error (MSE) as the loss function.
+*	Optimize with Adam optimizer.
+*	Validate on test data.
+** Step 5: Image Restoration & Evaluation
+*	Predict restored images using the trained model.
+*	Compare original, degraded, and restored images.
+*	Evaluate performance using PSNR (Peak Signal-to-Noise Ratio)
 
 *Last Updated: February 2025*
