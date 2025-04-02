@@ -199,24 +199,24 @@ About MNIST :-
 * Functions like markers, watershed, with some additional color placement functions can be used.
 
 ### Task 2- Image Restoration using Autoencoder Model
-** Step 1: Load & Preprocess Data
+- Step 1: Load & Preprocess Data
 *	Load dataset (e.g., MNIST, CIFAR-10).
 *	Normalize pixel values between [0,1].
 *	Resize images if necessary.
 * 	Convert to grayscale (if required).
-** Step 2: Simulate Degradation
+- Step 2: Simulate Degradation
 *	Introduce noise (Gaussian noise, salt & pepper noise).
 *	Apply blur (motion blur, Gaussian blur).
 *	Add compression artifacts if needed.
-** Step 3: Build the Autoencoder Model
+- Step 3: Build the Autoencoder Model
 *	Encoder: Uses convolutional layers to extract features and compress image representation.
 *	Decoder: Reconstructs the image from the compressed representation using up-sampling and convolutional layers.
-** Step 4: Train the Model
+- Step 4: Train the Model
 *	Train autoencoder using degraded images as input and original images as target output.
 *	Use Mean Squared Error (MSE) as the loss function.
 *	Optimize with Adam optimizer.
 *	Validate on test data.
-** Step 5: Image Restoration & Evaluation
+- Step 5: Image Restoration & Evaluation
 *	Predict restored images using the trained model.
 *	Compare original, degraded, and restored images.
 *	Evaluate performance using PSNR (Peak Signal-to-Noise Ratio)
