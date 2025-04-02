@@ -13,6 +13,7 @@ An engaging course repository for computer vision assignments, focusing on pract
 - [Technical Requirements](#-technical-requirements)
 - [Getting Started](#-getting-started)
 - [Assignments](#-assignments)
+    * [Experiment 8](#-Experiment-8)
     * [Experiment 9](#-Experiment-9)
 - [Resources](#-resources)
 
