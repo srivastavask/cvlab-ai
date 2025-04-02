@@ -120,8 +120,8 @@ jupyter>=1.0.0
 4. Maintain clean commit history
 
 ## 🚀 Assignments
-## Experiment 1
 
+## 🌟 Experiment 1
 Task-1: Perform following operations on image- 
 -Image Resizing: Resizing involves changing the dimensions of an image, either by scaling it up or down.
 -Image resizing (interpolation methods)
