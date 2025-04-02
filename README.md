@@ -189,4 +189,15 @@ About MNIST :-
 - Few Shot
 ---
 
+## Experiment 9
+### Task 1.1- Interest Point Detection, Feature Matching and Contour Detection
+-Interest Point Detection:-  Apply SIFT (Scale Invariant Feature Transform) Detector function using cv.SIFT_create()
+-Feature Matching:- Feature matching is a fundamental technique in computer vision and image processing that involves finding correspondences between features detected in different images.
+-Use methods namely ORB (Oriented FAST and Rotated BRIEF) and BFMatcher (Brute-Force Matcher).
+-Contour Detection with Custom Seeds:- Contour represents the outline or boundary of an object, connecting continuous points of similar intensity or color.
+-In image processing, edges represent abrupt changes in brightness or color, while contours are closed curves that outline the shape or form of an object, often derived from edges.
+-Functions like markers, watershed, with some additional color placement functions can be used.
+
+### Task 2- Blob detection and Image Quality Enhancement
+
 *Last Updated: February 2025*
