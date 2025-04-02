@@ -165,7 +165,7 @@ About MNIST :-
 - Load the dataset in sklearn using ‘load_digits’.
 - Load the dataset in pyspark using 'spark.read.csv()”
 
-## Experiment 8
+## 🌟 Experiment 8
 ### Task 1.1- Blob detection and Image Quality Enhancement
 - Blob detection:- Blob detection is a basic method in computer vision used to locate areas of interest in a picture.
 - Apply the three different blob detection techniques (LoG, DoG, HoG) separately on the same image
@@ -189,7 +189,7 @@ About MNIST :-
 - Few Shot
 ---
 
-## Experiment 9
+## 🌟 Experiment 9
 ### Task 1- Interest Point Detection, Feature Matching and Contour Detection
 * Interest Point Detection:-  Apply SIFT (Scale Invariant Feature Transform) Detector function using cv.SIFT_create()
 * Feature Matching:- Feature matching is a fundamental technique in computer vision and image processing that involves finding correspondences between features detected in different images.
