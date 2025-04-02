@@ -221,4 +221,15 @@ About MNIST :-
 *	Compare original, degraded, and restored images.
 *	Evaluate performance using PSNR (Peak Signal-to-Noise Ratio)
 
+### Generative Adversarial Networks on MNIST and Cifar-10 datasets
+- Take any GAN variant and generate 10 different digits of MNIST dataset and 10 different classes of cifar-10 dataset and plot the discriminator vs adversarial loss for both.
+- Min epoch – 50
+
+### Mobilenet based Image Classification
+- Apply Mobilenet on dogs-breed dataset as part of image classification task.
+- Compare the three Versions V1,V2 and V3 performance under same hyperparameter setting
+
+### Unet for Image Segmentation
+- Task is to first train the  U-Net model on the Oxford-IIIT Pet Dataset or the brain tumor T1-Lighted CE-MRI image dataset to perform foreground-background segmentation and evaluate the segmentation performance using IoU (Intersection over Union) and Dice Coefficient.
+
 *Last Updated: February 2025*
