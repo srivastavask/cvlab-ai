@@ -25,3 +25,7 @@ Visualization & Reporting:
 Interactive Dashboards for Law Enforcement and Authorities
 Real-time Heatmaps and Alerts for High-Risk Zones
 This project aims to foster a safer environment for women by enabling proactive intervention and ensuring that authorities can act swiftly in emergency situations.
+
+
+Some Related Papers:
+A Systematic Review of Hand Gesture Recognition: An Update From 2018 to 2024 : [https://ieeexplore.ieee.org/document/10580881]
