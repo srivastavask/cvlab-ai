@@ -28,4 +28,7 @@ This project aims to foster a safer environment for women by enabling proactive 
 
 
 Some Related Papers:
-A Systematic Review of Hand Gesture Recognition: An Update From 2018 to 2024 : [https://ieeexplore.ieee.org/document/10580881]
+[A Systematic Review of Hand Gesture Recognition: An Update From 2018 to 2024](https://ieeexplore.ieee.org/document/10580881)
+[Gender Classification Hand Recognition System Using Key-Point Detection with Deep Neural Network](https://ieeexplore.ieee.org/document/9731918)
+[Development of Women's Safety System Using Iot and Taser Technology
+](https://ieeexplore.ieee.org/document/10837901)
