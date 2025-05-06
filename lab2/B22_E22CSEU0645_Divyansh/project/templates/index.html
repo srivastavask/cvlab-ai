@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>🛒 Smart Product Finder</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <script>
+        function previewImage(event) {
+            const reader = new FileReader();
+            reader.onload = function () {
+                const output = document.getElementById('imgPreview');
+                output.src = reader.result;
+                output.style.display = 'block';
+            };
+            reader.readAsDataURL(event.target.files[0]);
+        }
+
+        function showLoading() {
+            document.getElementById("loading").style.display = "flex";
+        }
+
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark-mode");
+        }
+    </script>
+</head>
+<body>
+    <div class="background"></div>
+    <div class="main-wrapper">
+
+        <!-- Dark Mode Toggle -->
+        <label class="switch">
+            <input type="checkbox" id="darkModeToggle" onchange="toggleDarkMode()">
+            <span class="slider"></span>
+        </label>
+
+        <h1 class="site-title">🧠 AI-Powered Product Search</h1>
+        <div class="container">
+            <form method="POST" enctype="multipart/form-data" onsubmit="showLoading()">
+                <label class="upload-label">
+                    <input type="file" name="image" accept="image/*" onchange="previewImage(event)" required>
+                    📸 Upload Product Image
+                </label>
+                <img id="imgPreview" class="image-preview" />
+                <button type="submit">🔍 Generate & Search</button>
+                <div id="loading" class="loader" style="display: none;">
+                    <div class="spinner"></div>
+                    <span>Processing your image and searching products...</span>
+                </div>
+            </form>
+            {% if results %}
+            <h2>🔎 Top Matching Products</h2>
+            {% for platform in results %}
+                <div class="platform-section">
+                    <div class="platform-header">
+                        <hr class="platform-line">
+                        <h3 class="platform-title">🛍️ {{ platform.site }}</h3>
+                        <hr class="platform-line">
+                    </div>
+                    {% if platform.results %}
+                        <div class="horizontal-results">
+                            {% for result in platform.results %}
+                                <div class="card horizontal-card">
+                                    {% if result.thumbnail %}
+                                        <img src="{{ result.thumbnail }}" alt="Product Image" class="result-thumbnail">
+                                    {% endif %}
+                                    <h3>{{ result.title }}</h3>
+                                    <a href="{{ result.link }}" target="_blank">🔗 View Product</a>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        <p>No results found for {{ platform.site }}.</p>
+                    {% endif %}
+                </div>
+            {% endfor %}
+        {% endif %}
+        
+
+        </div>
+    </div>
+</body>
+</html>
